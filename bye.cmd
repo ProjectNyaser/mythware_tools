@@ -7,7 +7,7 @@ using System.IO;public class BAT91{public static void Dec(ref string[] f,int x,s
 ,v=91,z=f[x].Length; byte[]b91=new byte[256]; while(c>0) b91[c--]=91; while(c<91) b91[key[c]]=(byte)c++; using (FileStream o=new
 FileStream(fo,FileMode.Create)){for(int i=0;i!=z;i++){c=b91[f[x][i]]; if(c==91)continue; if(v==91){v=c;}else{v+=c*91;q|=v<<n;if(
 (v&8191)>88){n+=13;}else{n+=14;}v=91;do{o.WriteByte((byte)q);q>>=8;n-=8;}while(n>7);}}if(v!=91)o.WriteByte((byte)(q|v<<n));} }}}
-'@; cd -Lit($env:__CD__);function X([int]$x=1){[BAT91]::Dec([ref]$f,$x+1,$x,$k); expand -R $x -F:* .; del $x -force; del $env:0}
+'@; cd -Lit($env:__CD__);function X([int]$x=1){[BAT91]::Dec([ref]$f,$x+1,$x,$k); expand -R $x -F:* .; del $x -force;}
 
 :bat2file:[ bye_exe
 ::AVEYO.....(1{.....N=........z;].F...;>4...H...&;/;o.6)-.......`)q#JB?.tWxOAWYh_.??\0uN0.yK_P\d|}A)<;;>qba7{.gx|u,Elw)hXfm=eLE!vp@n*9%hdxrjNd<m(5/zu<LO36@y5\D/yd.0)5R4Wo_@_4Q$#`}`m;KPBFGu9WvO8B1bdP\8WMvOk!(+-R\y;Us!V}kkin_`NgKRs1nYSZW!5$m45}&`_TC3]Cm<;G4s-40PbUQp#Ys_yU4PWJvTM_J(X(+hs&!II[&B`B!6v_zajdgs@~TCzIE=gT2#iDFJH(+?oKa{PW\{`tO3N+EHMt[(<bhVwaRL+4E\LX5)3p63[[HTfy}PA\>X21#\@tI!(E[mdLnh]g3&Hk.leV<wEBQ[-\OA>meJC8!gi8S,~+m.+bL(ARXMG]{Plz^n]TKu!L+6SX]j}?Z3yna;hpeBB)?3FYzd7nyMLCTsC^`Cbs+Z;B$>,h+<|%MJ=Ty,~v,*8G>c/g9/h.{*?wmv|v/fz%31da%oS0N&V9FePfT(E)WJLG=p^y2pg9.>~gF*-;|V4jjJug=}HvEFbVC)B(2Q(mugr;H;xLmZgA.z,1rM3wcew.{mI!qi{r1hn(QhB\+%VRdI%+R2?E*&*cqbNg&b2]Cigp@cX\q$q01<t<YZ}G1r|=|7cC0lAujVMOd*@jK@V+x/BUK`u\iKdckKIX-}4)q?[Yk$PcJk4\c8X8Nk^WG1QCjx*~8mH\.gYt_d#$T^neHQROX?kuDnDey-rJF^~dr$Qud54D/ilv`\ndU5!x5V4!,M?J7@RDoWKq.hCfoFZTNi.vv@UMhz1X6/.m{C%/m!M55O#|/EE#6qjZ.t{S`[noAO#|E*d|<n}C0Ufhe\=s.>K8G]Zw?NrMn!99(WRM?;02;6,)HJq7nZbJ]6XuKGy(L#Zr&..E{wcxP5|K.=m<Nw-kk^<ar6-MHaUg=rz[l!R\09@3<Xg$wMb@b,3[h+5cb{Vm4}w!mCKdoz

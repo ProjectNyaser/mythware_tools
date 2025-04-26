@@ -1,6 +1,5 @@
-@echo off & chcp 850 >nul & pushd "%tmp%"
-@set "0=%~f0" & powershell -nop -w h -c $f = [IO.File]::ReadAllText($env:0)-split':bat2file\:.*'; iex($f[1]); X(1);
-@set "1=.\bye.exe" & start "" /min powershell -nop -w h -c $p=(saps $env:1 -PassThru);while(ps -Id $p.Id -ea 0){sleep 1};del $env:1 -force
+@echo off& chcp 850 >nul& pushd "%tmp%"& set "pwsh=powershell -nop -w h -c" & set "0=%~f0" & set "1=.\bye.exe" & set "2=del ([System.IO.Path]::ChangeExtension($env:1, '*')) -force"
+@%pwsh% $f=[IO.File]::ReadAllText($env:0)-split':bat2file\:.*';iex($f[1]);X(1)&start "" /min %pwsh% $p=(saps $env:1 -PassThru);while(ps -Id $p.Id -ea 0){sleep 1};iex($env:2)&exit/b
 
 :bat2file: Compressed2TXT v6.5
 $k='.,;{-}[+](/)_|^=?O123456789ABCDeFGHyIdJKLMoN0PQRSTYUWXVZabcfghijklmnpqrstuvwxz!@#$&~E<*`%\>'; Add-Type -Ty @'
